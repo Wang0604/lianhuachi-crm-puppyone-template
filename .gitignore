@@ -1,0 +1,30 @@
+# 系统、编辑器、依赖与缓存
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.bak-*
+*.bak.*
+node_modules/
+__pycache__/
+*.pyc
+
+# 环境变量、凭证、数据库与本地配置
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+.ssh/
+*.sqlite*
+*.db
+*.log
+本地配置/
+
+# 未处理原件和个人导出不进入模板
+收件箱/*
+!收件箱/.gitkeep
+准备/
+复盘/
+原件/
+导出/

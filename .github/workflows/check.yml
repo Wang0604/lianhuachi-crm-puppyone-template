@@ -1,0 +1,17 @@
+name: Template checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test 脚本/检查.test.mjs
+      - run: node 脚本/检查.mjs --today 2026-10-17
+      - run: node 脚本/公开检查.mjs
